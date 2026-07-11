@@ -1,12 +1,14 @@
-# Linear Regression Model Estimation & Evaluation
+# Multiple Regression & Feature Selection Modeling
 
-This folder contains a computational implementation focused on estimating parameters and evaluating the quality of Linear Regression models as part of systems modeling analysis.
+This folder contains a statistical optimization and systems modeling approach to building Multiple Linear Regression models. It focuses on finding the optimal combination of independent variables (features) to predict a target outcome.
 
 ##  Implemented Methodology
-* **Parameter Estimation:** Manually and algorithmically calculating regression coefficients ($b_0, b_1, b_2, b_3$) to establish the mathematical relationship between the predictors and the response variable.
-* **Model Prediction & Fitting:** Generating fitted values ($\hat{Y}$) based on estimated parameters to simulate the model's behavior against the actual observations.
-* **Comparative Evaluation:** Analyzing the performance metrics and error terms across different model iterations to ensure statistical validity and precision.
+* **Combinatorial Feature Selection:** Utilizing `itertools.combinations` to systematically evaluate all possible subsets of independent variables ($X_1, X_2, X_3, X_4$).
+* **Model Evaluation ($R^2$ Optimization):** Running Ordinary Least Squares (OLS) regression for each subset to determine the coefficient of determination ($R^2$) and identify the mathematically optimal model (`best_model`).
+* **Statistical Significance ($F$-test):** Implementing an $F$-test calculation to evaluate whether the inclusion of additional features significantly improves the model's explanatory power compared to a baseline model.
 
 ##  Technologies Used
 * **Python 3**
-* **Pandas & NumPy:** For managing dataset structures, computing matrix arrays, and arithmetic calculations.
+* **Pandas & NumPy:** For structured dataset management and matrix operations.
+* **Statsmodels:** For executing advanced statistical tests and Ordinary Least Squares (OLS) regression estimation.
+* **Itertools:** For efficient mathematical combinations generation.
