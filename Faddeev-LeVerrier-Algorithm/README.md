@@ -1,13 +1,42 @@
-# Faddeev-LeVerrier Algorithm for Matrix Analysis
+# Faddeev–LeVerrier Algorithm for Matrix Analysis
 
-This folder contains a numerical linear algebra project focused on computing the characteristic polynomial coefficients and the inverse of a square matrix using the Faddeev-LeVerrier algorithm.
+This project implements the **Faddeev–LeVerrier algorithm** for computing the **characteristic polynomial** of a square matrix and its **inverse** through an iterative numerical approach.
 
-##  Implemented Methodology
-* **Characteristic Polynomial Estimation:** Recursively calculating the coefficients ($p_k$) of the matrix $A$ using structural trace operations ($\text{Tr}(A_k)$).
-* **Matrix Inversion:** Utilizing the final stages of the LeVerrier iterations to algorithmically derive the exact inverse matrix ($A^{-1}$) without employing traditional Gaussian elimination.
-* **Algebraic Verification:** Conducting automated validation checks ($A \cdot A^{-1} = I$) to confirm the numerical precision of the custom implementation.
+## Features
 
-##  Technologies Used
+* Computes the coefficients of the characteristic polynomial using the Faddeev–LeVerrier recursion.
+* Calculates the inverse of a non-singular matrix without Gaussian elimination.
+* Performs automatic verification by checking that (A \times A^{-1} = I).
+* Displays the characteristic polynomial in a symbolic form.
+
+## Algorithm Overview
+
+The implementation follows the classical Faddeev–LeVerrier procedure:
+
+1. Recursively computes the coefficients of the characteristic polynomial using matrix traces.
+2. Constructs intermediate matrices required by the algorithm.
+3. Derives the inverse matrix from the final iteration when the matrix is invertible.
+4. Verifies the correctness of the computed inverse.
+
+## Technologies
+
 * **Python 3**
-* **NumPy:** For high-performance matrix multiplications, identity matrix generations (`np.eye`), and trace operations (`np.trace`).
-* **SymPy:** For analytical representation and symbolic printing of the final polynomial equations.
+* **NumPy** – Matrix operations, identity matrices, and trace calculations.
+* **SymPy** – Symbolic mathematics and characteristic polynomial representation.
+
+## Output
+
+The program provides:
+
+* Characteristic polynomial coefficients
+* Characteristic polynomial
+* Inverse matrix (if it exists)
+* Verification that
+
+[
+A \cdot A^{-1} = I
+]
+
+## Mathematical Background
+
+The Faddeev–LeVerrier algorithm is a recursive method in numerical linear algebra that computes the coefficients of the characteristic polynomial of a square matrix. An important property of the algorithm is that it also enables the computation of the inverse matrix using the intermediate matrices generated during the recursion, provided the determinant is non-zero.
