@@ -14,7 +14,7 @@ Below is the graphical representation of the empirical data points plotted again
   <img src="img/curve_fitting_least_squares_img.png" alt="Curve Fitting Analysis" width="700">
 </p>
 
-*The chart highlights the distribution of experimental data nodes ($X_i, f_i$) and tracks how closely the evaluated regression functions minimize the residual errors across the coordinate field.*
+*The chart highlights the distribution of experimental data nodes (Xi, fi) and tracks how closely the evaluated regression functions minimize the residual errors across the coordinate field.*
 
 ##  Technologies Used
 * **Python 3**
